@@ -1,0 +1,43 @@
+.about {
+  background-color: var(--color-txt-light);
+}
+
+.about__container {
+  z-index: 10;
+  padding-bottom: 71px;
+}
+
+.about__title {
+  margin-bottom: 11px;
+}
+
+.about__description {
+  width: 68%;
+}
+
+@media (min-width: 1921px) {
+  .about__description {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .about__container {
+    padding-bottom: 70px;
+  }
+
+  .about__description {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about__container {
+    padding-bottom: 40px;
+  }
+
+  .about__description {
+    font-size: 14px;
+    line-height: 28px;
+  }
+}

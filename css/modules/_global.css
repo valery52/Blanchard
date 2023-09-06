@@ -1,0 +1,211 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans bold'), local('Open Sans-bold'),
+    url('../../fonts/opensans-bold.woff2') format('woff2'),
+    url('../../fonts/opensans-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans regular'), local('Open Sans-regular'),
+    url('../../fonts/opensans-regular.woff2') format('woff2'),
+    url('../../fonts/opensans-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans semibold'), local('Open Sans-semibold'),
+    url('../../fonts/opensans-semibold.woff2') format('woff2'),
+    url('../../fonts/opensans-semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Italic'), local('Open Sans-Italic'),
+    url('../../fonts/opensans-italic.woff2') format('woff2'),
+    url('../../fonts/opensans-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+:root {
+/* Color */
+  --color-txt-light: #fff;
+  --color-txt-dark: #333;
+  --color-txt-grey: #999;
+  --color-decor-amethyst: #9D5CD0;
+  --color-decor-amethyst-light: rgba(157, 92, 208, .5);
+  --color-decor-black: #000;
+  --color-grey: #666;
+  --color-light-grey: rgba(102, 102, 102, .5);
+  --color-superlight-grey: #ececec;
+  --color-focus: #7943A4;
+  --color-hover: #C283F3;
+  --color-background: #D88F99;
+  --color-background2: rgba(194, 131, 243, 0.4);
+  --color-background3: #eaeaea;
+  --color-hover-border: #D1A9F0;
+  --color-line: #cacaca;
+  /* Font */
+  --font-size-btn: 18px;
+  --line-height-btn: 25px;
+  --font-size-linkDescr: 16px;
+  --line-height-linkDescr: 32px;
+  --font-size-caption: 24px;
+  --font-size-small: 12px;
+  --line-height-small: 16px;
+  /* Transition */
+  --transition: .3s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 65px;
+  color: var(--color-txt-dark);
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1700px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 85px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.btn {
+  margin: 0;
+  padding: 17px 35px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--font-size-btn);
+  line-height: var(--line-height-btn);
+  text-align: center;
+  color: var(--color-txt-light);
+  border: 2px solid var(--color-decor-amethyst);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.link {
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font-size-linkDescr);
+  line-height: var(--line-height-linkDescr);
+  color: var(--color-decor-amethyst);
+}
+
+.link:focus-visible {
+  outline: none;
+}
+
+.description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font-size-linkDescr);
+  line-height: var(--line-height-linkDescr);
+  color: var(--color-txt-dark);
+}
+
+.subtitle {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--font-size-caption);
+  line-height: 33px;
+  color: var(--color-txt-dark);
+}
+
+.visualy-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+
+  a,
+  .btn {
+    cursor: auto;
+  }
+
+}
+
+@media (max-width: 576px) {
+  :root {
+    --font-size-btn: 12px;
+    --line-height-btn: 16px;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 52px;
+  }
+
+
+  h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .subtitle {
+    line-height: 32px;
+  }
+}

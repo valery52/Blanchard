@@ -1,0 +1,241 @@
+.hero {
+  position: relative;
+}
+
+.hero__container {
+  position: relative;
+  padding-top: 77px;
+  padding-bottom: 120px;
+  pointer-events: none;
+}
+
+.hero__wrapper {
+  z-index: -10;
+  margin-right: auto;
+  width: 38%;
+}
+
+.hero__wrapper>* {
+  pointer-events: auto;
+}
+
+.hero__heading {
+  margin: 0;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 83.5px;
+  color: var(--color-txt-light);
+}
+
+.hero__description {
+  margin-bottom: 89px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--font-size-btn);
+  line-height: 30px;
+  color: var(--color-txt-light);
+}
+
+.hero__btn {
+  display: inline-block;
+  position: relative;
+  padding-top: 21px;
+  padding-right: 32px;
+  padding-bottom: 19px;
+  padding-left: 32px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--font-size-btn);
+  color: var(--color-txt-light);
+  background-color: var(--color-decor-amethyst);
+  border: 3px solid transparent;
+  transition: border var(--transition);
+  box-sizing: border-box;
+}
+
+.hero__btn::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  bottom: -9px;
+  left: -9px;
+  background-color: transparent;
+  border: 3px solid var(--color-hover);
+  border-radius: 100px;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.hero__btn:hover {
+  border: 3px solid var(--color-hover-border);
+}
+
+/* .hero__btn:focus-visible {
+  border: 3px solid var(--color-hover);
+} */
+
+.hero__btn:focus-visible:not(:active):not(:hover)::before {
+  opacity: 1;
+}
+
+.hero__btn:active {
+  background-color: var(--color-focus);
+  border: 3px solid var(--color-hover-border);
+}
+
+.top-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider.swiper-container {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  animation-name: resize;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: bottom;
+}
+
+.slide {
+  overflow: hidden;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-txt-dark);
+}
+
+.slide-1 {
+  background-image: url('../../img/hero_img_1_1920.jpg');
+}
+
+.slide-2 {
+  background-image: url('../../img/hero_img_2_1920.jpg');
+}
+
+.slide-3 {
+  background-image: url('../../img/hero_img_3_1920.jpg');
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+}
+
+@media (max-width: 1400px) {
+  .hero__container {
+    padding-top: 119px;
+    padding-bottom: 114px;
+  }
+
+  .hero__wrapper {
+    width: 80%;
+  }
+
+  .hero__heading {
+    margin-bottom: 6px;
+  }
+
+  .hero__description {
+    margin-bottom: 132px;
+  }
+
+  .slide-1 {
+    background-image: url('../../img/hero-img-1-1024.jpg');
+  }
+
+  .slide-2 {
+    background-image: url('../../img/hero-img-2-1024.jpg');
+  }
+
+  .slide-3 {
+    background-image: url('../../img/hero-img-3-1024.jpg');
+  }
+}
+
+@media (max-width: 992px) {
+  .hero__wrapper {
+    width: 100%;
+  }
+
+  .slide-1 {
+    background-image: url('../../img/hero-img-1-768.jpg');
+  }
+
+  .slide-2 {
+    background-image: url('../../img/hero-img-2-768.jpg');
+  }
+
+  .slide-3 {
+    background-image: url('../../img/hero-img-3-768.jpg');
+  }
+}
+
+
+@media (max-width: 767px) {
+
+
+  .hero__heading {
+    font-size: 9.4vw;
+    line-height: calc(83.5 / 72);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero__container {
+    padding-top: 36px;
+    padding-bottom: 45px;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+
+  .hero__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__heading {
+    text-align: center;
+    margin-bottom: 11px;
+    font-size: 32px;
+    line-height: 37px;
+  }
+
+  .hero__description {
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: normal;
+    line-height: 135%;
+  }
+
+  .hero__btn {
+    padding-top: 9px;
+    padding-right: 14px;
+    padding-bottom: 9px;
+    padding-left: 17px;
+  }
+
+  .slide-1 {
+    background-image: url('../../img/hero-img-1-320.jpg');
+  }
+
+  .slide-2 {
+    background-image: url('../../img/hero-img-2-320.jpg');
+  }
+
+  .slide-3 {
+    background-image: url('../../img/hero-img-3-320.jpg');
+  }
+}
+
